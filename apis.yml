@@ -1,8 +1,28 @@
 aid: lighthouse
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/lighthouse.png
 name: Lighthouse
-description: 'Lighthouse is a company surfaced as a portfolio company of accel, dcm-ventures and added
-  to the API Evangelist network as a stub for enrichment. Sector: media. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: 'Lighthouse is an UNRESOLVED venture-portfolio lead in the API Evangelist network: the slug
+  conflates at least two different companies named "Lighthouse" surfaced by two different VC portfolio
+  harvests, and neither resolves to a live company with a developer surface. Accel lists Lighthouse as a
+  seed-stage "metaverse search engine" at www.lighthouselabs.xyz — that domain now serves a GoDaddy/Afternic
+  domain-for-sale parking lander (registered 2026-04-06, nameservers ns5/ns6.afternic.com), so the company
+  appears defunct or renamed. DCM Ventures lists Lighthouse as an "AI meeting notes and productivity app"
+  at lighthouse.app — that domain resolves 200 but serves an unrelated Texas apartment-rental cash-back
+  platform transitioning to the UMoveFree brand, with no developer portal, no API, and no docs. The
+  established hospitality/travel-intelligence company also named Lighthouse (formerly OTA Insight) is
+  already profiled separately in the network as the lighthouse-travel provider and is NOT this record.
+  Enrichment is blocked pending a human decision on which entity, if any, this slug should represent.'
 url: https://raw.githubusercontent.com/api-evangelist/lighthouse/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,12 +31,52 @@ x-backed-by:
 - dcm-ventures
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status: unresolved
+x-status-reason: slug-conflation-and-dead-domain
+x-enrichment:
+  last-run: '2026-07-19'
+  result: no-artifacts
+  reason: No live company website with a developer surface could be attributed to this slug.
+  candidates:
+  - name: Lighthouse (Accel portfolio)
+    described-as: Metaverse search engine
+    sector: media
+    url: https://www.lighthouselabs.xyz/
+    probe:
+      status: 200
+      verdict: parked
+      evidence: Serves a domain-for-sale parking lander that redirects to forsale.godaddy.com; whois shows
+        creation date 2026-04-06, registrar GMO Internet (Onamae.com), nameservers ns5.afternic.com /
+        ns6.afternic.com.
+      probed: '2026-07-19'
+  - name: Lighthouse (DCM Ventures portfolio)
+    described-as: AI meeting notes and productivity app
+    sector: frontier-tech
+    url: https://lighthouse.app/
+    probe:
+      status: 200
+      verdict: identity-mismatch
+      evidence: Live site is an apartment-rental cash-back platform for ~9,000 Texas properties, noted as
+        transitioning to the UMoveFree brand. Does not match the DCM portfolio description. Probed
+        /.well-known/security.txt 404, /llms.txt 404, /docs 404, /api 404, /developers 404, /openapi.json
+        404, /sitemap.xml 200 — no developer or API surface of any kind.
+      probed: '2026-07-19'
+  not-this-record:
+  - slug: lighthouse-travel
+    name: Lighthouse (formerly OTA Insight)
+    note: Travel/hospitality commercial platform with a real Integration API; already profiled separately
+      in the network.
+  next-step: Human triage — split this slug into per-VC leads with correct URLs, retire it as a dead lead,
+    or merge into an existing provider. Do not re-run enrichment until an entity is confirmed.
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Media
+- Venture Portfolio
+- Lead
+- Unresolved
 apis: []
 maintainers:
 - FN: Kin Lane
