@@ -64,17 +64,69 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-**Status: UNRESOLVED venture-portfolio lead. Enrichment blocked — do not re-run until a human confirms which entity this slug represents.**
+Lighthouse is an UNRESOLVED venture-portfolio lead in the API Evangelist network: the slug conflates at least two different companies named "Lighthouse" surfaced by two different VC portfolio harvests, and neither resolves to a live company with a developer surface. Accel lists Lighthouse as a seed-stage "metaverse search engine" at www.lighthouselabs.xyz — that domain now serves a GoDaddy/Afternic domain-for-sale parking lander (registered 2026-04-06, nameservers ns5/ns6.afternic.com), so the company appears defunct or renamed. DCM Ventures lists Lighthouse as an "AI meeting notes and productivity app" at lighthouse.app — that domain resolves 200 but serves an unrelated Texas apartment-rental cash-back platform transitioning to the UMoveFree brand, with no developer portal, no API, and no docs. The established hospitality/travel-intelligence company also named Lighthouse (formerly OTA Insight) is already profiled separately in the network as the lighthouse-travel provider and is NOT this record. Enrichment is blocked pending a human decision on which entity, if any, this slug should represent.
 
-This slug conflates at least two different companies named "Lighthouse", surfaced by two separate VC portfolio harvests. Neither resolves to a live company with a developer surface.
+**Areas:** Company · Media · Venture Portfolio · Leads · Unresolved
 
-| Source | Described as | URL | Probe (2026-07-19) |
-|---|---|---|---|
-| Accel | Metaverse search engine (seed, media) | https://www.lighthouselabs.xyz/ | **Parked.** Serves a domain-for-sale lander redirecting to forsale.godaddy.com. Whois: created 2026-04-06, registrar GMO Internet (Onamae.com), NS ns5/ns6.afternic.com. Company appears defunct or renamed. |
-| DCM Ventures | AI meeting notes and productivity app (frontier-tech) | https://lighthouse.app/ | **Identity mismatch.** Live (200) but serves an apartment-rental cash-back platform for ~9,000 Texas properties, transitioning to the UMoveFree brand. No developer portal, no API, no docs (`/docs`, `/api`, `/developers`, `/openapi.json`, `/llms.txt`, `/.well-known/security.txt` all 404). |
+## Lighthouse on APIs.io
 
-**Not this record:** the travel/hospitality Lighthouse (formerly OTA Insight), which does publish a real Integration API, is already profiled separately in the network as `lighthouse-travel`.
+Everything profiled for Lighthouse is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/lighthouse/](https://apis.io/providers/lighthouse/)** — or go straight to one of the APIs or properties below.
 
-## Next step
+## Where to find this API
 
-Human triage — split this slug into per-VC leads with correct URLs, retire it as a dead lead, or merge it into an existing provider. No artifacts were generated, because there is nothing real to capture.
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.lighthouselabs.xyz/)
+
+## API Evangelist rating
+
+**Kin Score 2.6** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 0.0 |
+| Access clarity | 0.0 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 0.0** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/lighthouse/](https://apis.io/providers/lighthouse/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Lighthouse: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/lighthouse/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
